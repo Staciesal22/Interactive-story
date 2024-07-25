@@ -3,23 +3,21 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentPage = 0;
 
     const showPage = (index) => {
-        if (index < 0 || index >= pages.length) return; // Ensure index is within bounds
+        if (index < 0 || index >= pages.length) return; 
         
         const currentElement = pages[currentPage];
         const nextElement = pages[index];
 
-        // Animate current page
         gsap.to(currentElement, { opacity: 0, duration: 0.5, onComplete: () => {
             currentElement.classList.remove("active");
             nextElement.classList.add("active");
             
-            // Animate next page
             gsap.fromTo(nextElement, { x: '100%' }, { x: '0%', opacity: 1, duration: 1 });
             gsap.from(nextElement.querySelector('h1'), { y: -50, opacity: 0, duration: 1, delay: 0.5 });
             gsap.from(nextElement.querySelector('p'), { y: 50, opacity: 0, duration: 1, delay: 1 });
             gsap.from(nextElement.querySelector('img'), { scale: 0, duration: 1, delay: 1.5 });
             
-            currentPage = index; // Update current page index
+            currentPage = index; 
         }});
     };
 
@@ -49,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
         src: ['content/soft-piano-100-bpm-121529.mp3'],
         autoplay: true,
         loop: true,
-        volume: 0.5,
+        volume: 2,
     });
 
     // Example of interactive elements with GSAP animation
