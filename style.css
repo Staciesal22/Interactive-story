@@ -1,0 +1,74 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+#storybook {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.page img {
+  display: block;
+  margin: 20px auto; 
+  max-width: 40%; 
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 208, 0.8); 
+  transition: all 0.5s ease;
+}
+
+.page img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgb(0, 255, 183);
+}
+
+.page h1, .page p {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.page h1 {
+  font-size: 2.5em;
+  color: #b57ad0; 
+  text-shadow: 0 0 10px rgba(0, 255, 208, 0.8); 
+}
+
+.page p {
+  font-size: 1.2em;
+  color: #555;
+  text-shadow: 0 0 5px rgba(0, 255, 234, 0.5); 
+}
+
+.page button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  background-color: #ff57d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 183, 0.6); 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page button:hover {
+  background-color: #f69ecd;
+  box-shadow: 0 0 20px rgba(0, 255, 183, 0.6); 
+}
